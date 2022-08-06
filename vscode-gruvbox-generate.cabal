@@ -1,0 +1,107 @@
+cabal-version:      3.6
+name:               vscode-gruvbox-generate
+version:            0.1.0.0
+
+-- A short (one-line) description of the package.
+-- synopsis:
+
+-- A longer description of the package.
+-- description:
+
+-- A URL where users can report bugs.
+-- bug-reports:
+
+-- The license under which the package is released.
+-- license:
+author:             brian
+maintainer:         littlebubu.shu@gmail.com
+
+-- A copyright notice.
+-- copyright:
+-- category:
+extra-source-files: CHANGELOG.md
+
+common common-options
+  -- yay
+  default-language: GHC2021
+  default-extensions:
+    FlexibleInstances,
+    FlexibleContexts,
+    InstanceSigs,
+    MultiParamTypeClasses,
+    ConstraintKinds,
+    LambdaCase,
+    EmptyCase,
+    TupleSections,
+    BangPatterns,
+    TypeApplications,
+    StandaloneDeriving,
+    OverloadedStrings,
+    RankNTypes,
+    ScopedTypeVariables,
+    NamedFieldPuns,
+    DuplicateRecordFields,
+    OverloadedRecordDot,
+    NoFieldSelectors,
+    GeneralizedNewtypeDeriving,
+    DataKinds,
+    ConstraintKinds,
+    TypeApplications,
+    KindSignatures,
+    StandaloneKindSignatures,
+    DeriveFoldable,
+    DeriveFunctor,
+    DeriveGeneric,
+    DeriveDataTypeable,
+    DeriveLift,
+    DeriveTraversable ,
+    GeneralizedNewtypeDeriving,
+    GADTs,
+    PolyKinds,
+    ViewPatterns,
+    PatternSynonyms,
+    TypeFamilies,
+    TypeFamilyDependencies,
+    FunctionalDependencies,
+    ExistentialQuantification,
+    TypeOperators,
+    OverloadedLabels,
+    ImportQualifiedPost,
+    ImpredicativeTypes,
+  ghc-options:
+    -Wall
+    -Wincomplete-record-updates
+    -Wredundant-constraints
+    -Wno-name-shadowing
+    -- until OverloadedRecordUpdate stabilizes
+    -Wno-ambiguous-fields
+    -Werror=incomplete-patterns
+    -Werror=incomplete-uni-patterns
+    -Werror=missing-methods
+  build-depends:
+    base >= 4.12 && <5,
+    aeson ^>= 2.1.0.0,
+    bytestring ^>= 0.11.3.1,
+    unordered-containers ^>= 0.2.19.1,
+    text ^>= 1.2.5.0,
+
+common rtsopts
+  ghc-options:
+    -threaded
+    -rtsopts
+    -with-rtsopts=-N
+
+executable vscode-gruvbox-generate
+  import: common-options, rtsopts
+  main-is: Main.hs
+  -- Modules included in this executable, other than Main.
+  other-modules:
+    Palette
+    Types
+    Syntax
+    Theme
+    Workbench
+    Imports
+    Semantic
+  build-depends:
+  hs-source-dirs: src

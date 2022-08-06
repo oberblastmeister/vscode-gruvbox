@@ -1,0 +1,28 @@
+{
+  "name": "gruvbox",
+  "displayName": "Gruvbox",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Gruvbox Medium Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/gruvbox-medium-dark.json"
+      }
+    ],
+    "semanticTokenScopes": [
+      {
+        "scopes": {
+          "keyword": ["keyword.other"]
+        }
+      }
+    ]
+  }
+}
