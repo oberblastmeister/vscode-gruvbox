@@ -162,7 +162,7 @@ new palette =
         scope = "entity.name.function.preprocessor",
         settings =
           def
-            { foreground = Just palette.purple
+            { foreground = Just palette.aqua
             }
       },
     C
@@ -193,11 +193,16 @@ new palette =
     C
       { name = "Property",
         scope =
-          "variable.object.property, support.variable.property, variable.other.property, variable.other.object.property, variable.other.enummember, variable.other.member, meta.object-literal.key, entity.other.attribute-name",
+          "variable.object.property, support.variable.property, variable.other.property, variable.other.object.property, variable.other.member, meta.object-literal.key, entity.other.attribute-name",
         settings =
           def
             { foreground = Just palette.blue
             }
+      },
+    C
+      { name = "Enum",
+        scope = "variable.other.enummember",
+        settings = def {foreground = Just palette.purple}
       },
     C
       { name = "Delimiter",
@@ -1050,7 +1055,7 @@ new palette =
       },
     C
       { name = "C aqua",
-        scope = "variable.other.member.c",
+        scope = "variable.other.member.c, string.quoted.double.include.c, string.quoted.other.lt-gt.include.c",
         settings =
           def
             { foreground = Just palette.aqua

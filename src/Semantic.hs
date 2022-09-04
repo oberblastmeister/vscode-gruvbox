@@ -43,5 +43,6 @@ new palette =
       -- Rust {{{
       ("macro:rust", palette.aqua),
       ("namespace:rust", palette.aqua),
-      ("selfKeyword:rust", palette.purple)
+      ("selfKeyword:rust", palette.purple),
+      ("class:c", palette.yellow)
     ]
